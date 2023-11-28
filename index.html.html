@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<h<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+        <title>Phone App</title>
+    </head>
+    <style>
+    body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        margin: 0;
+        background-color:#f0f0f0 ;
+    }
+    
+    .phone {
+        width: 300px;
+        height: 500px;
+        background-color: #fff;
+        border: 16px solid #333;
+        border-radius: 36px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+       
+    }
+    .speaker {
+    width: 50%;
+    height: 3px;
+    background-color: #555;
+    border-radius: 5px;
+    margin-left: 70px;
+    margin-top: -5px;
+}
+
+.camera {
+    width: 10px;
+    height: 10px;
+    background-color: #494747;
+    border-radius: 120%;
+    position: absolute;
+    top: 70px;
+    left: 675px;
+}
+    
+    .screen {
+        position: absolute;
+        padding: 20px;
+        transition: background-color 0.5s ease;
+        height: 470px;
+        width: 270px;
+        border-radius: 25px ;
+    }
+    
+    .light-mode {
+        background-color: #fff;
+        color: #333;
+    }
+    
+    .dark-mode {
+        background-color: #333;
+        color: #fff;
+    }
+    button{
+        border: none;
+        position: absolute;
+        height: 70px;
+        margin-top: 50px;
+        margin-left: 283px;
+        background-color: #a59d9d;
+    }
+    .icon {
+        font-size: 24px;
+        position: absolute;
+        bottom: 20px;
+        border-radius: 50%;
+        background-color: #fff;
+    }
+    .icon1 {
+        font-size: 24px;
+        position: absolute;
+        bottom: 20px;
+        border-radius: 50%;
+        background-color: #fff;
+        margin-left: 100px;
+    }
+    .icon2 {
+        font-size: 24px;
+        position: absolute;
+        bottom: 20px;
+        border-radius: 50%;
+        background-color: #fff;
+        margin-left: 220px;
+    }
+   
+</style>    
+    <body>
+        <div class="phone">
+            <div class="speaker"></div>
+        <div class="camera"></div>
+        
+        <div class="screen" id="screen">
+            <div class="icon">&#128222;</div>
+            <div class="icon1">&#128172;</div>
+            <div class="icon2">&#128247;</div>
+                <button onclick="toggleMode()"></button>
+            </div>
+        </div>
+    </body>
+    </html>
+    <script>
+      let screen = document.getElementById('screen')
+      function toggleMode() {
+            screen.classList.toggle('light-mode');
+            screen.classList.toggle('dark-mode');
+        }
+     
+   
+    </script>
+    
