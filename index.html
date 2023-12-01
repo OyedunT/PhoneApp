@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<h<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+        <title>Phone App</title>
+    </head>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+    body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        margin: 0;
+        box-shadow: 0px 0px 50px  rgba(7, 7, 7, 0.758) ;
+    }
+    
+    .phone {
+        width: 300px;
+        height: 500px;
+        border: 16px solid #333;
+        border-radius: 36px;
+        box-shadow: 10px 10px 20px rgba(7, 7, 0, 0.2);
+       
+    }
+    .speaker {
+    width: 50%;
+    height: 3px;
+    background-color: #555;
+    border-radius: 5px;
+    margin-left: 80px;
+    margin-top: -5px;
+    z-index: 1;
+}
+
+.camera {
+    width: 10px;
+    height: 10px;
+    background-color: #494747;
+    border-radius: 120%;
+    position: absolute;
+    top: 110px;
+    left: 755px;
+    z-index: 2;
+}
+
+    
+    #screen {
+        position: absolute;
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.758) inset;
+        height: 502px;
+        width: 300px;
+        border-radius: 0px 0px 2px 2px;
+        background-image: url(IMG_1104.JPG);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        top: 107px;
+        border-radius: 22px;
+        
+    }
+    #darkscreen{
+   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.758) inset;
+   height: 502px;
+   width: 300px;
+   border-radius: 0px 0px 2px 2px;
+   background-color: black;
+   position: absolute;
+   top: 0px;
+   border-radius: 20px;
+   z-index: 1;
+ }
+   
+   
+    
+   
+    #btn{
+        border: none;
+        position: absolute;
+        height: 45px;
+        width: 5px;
+        margin-top: 150px;
+        margin-left: 302px;
+        background-color: #a59d9d;
+        border-radius: 50px;
+        box-shadow: 0px 0px 50px 50px rgba(85, 84, 84, 0.824) inset;
+        z-index:1;
+    }
+
+    #btn2{
+    position: absolute;
+    margin-top: 100px;
+    margin-left: 302px;
+    background-color: #8a8888;
+    height: 25px;
+    width: 5px;
+    border: none;
+    box-shadow: 0px 0px 50px 50px rgba(85, 84, 84, 0.824) inset;
+    border-radius: 50px; 
+    z-index: 1;
+ }
+     #btn3{
+      position: absolute;
+    margin-top: 70px;
+    margin-left: 302px;
+    background-color: #8a8888;
+    height: 25px;
+    width: 5px;
+    border: none;
+    box-shadow: 0px 0px 50px 50px rgba(85, 84, 84, 0.824) inset;
+    border-radius: 50px; 
+    z-index: 1;
+ }
+
+  #vol{
+    z-index: 1;
+    position: absolute;
+    top: 150px;
+    height:10px;
+    border: none;
+    left:900px ;
+    width: 5px;
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.913);
+    border-radius: 50px;
+    box-shadow: 0px 0px 50px 5px rgba(0, 0, 0, 0.596) inset;
+    display: none;
+    
+  }
+
+  #comb{
+    position: absolute;
+    display:flex;
+    align-items: center;
+    gap: 230px;
+    padding: 0px 5px;
+    top: 0px;
+    display: none;
+    
+ }
+   #date{
+    display: flex;
+    font-size: 50px;
+    font-weight: bold;
+    color: white;
+    position: absolute;
+    margin-left: 100px;
+    top: 20px;
+   }
+   #network{
+    position: absolute;
+   color: white;
+   display: flex;
+   align-items: center;
+   font-size: 14px;
+   gap: 8px;
+   margin-left: 212px;
+   top: 9px;
+
+ }
+ .sig{
+    font-size: 8px;
+ }
+ .wif{
+    font-size: 10px;
+ }
+ #passwordcarrier{
+    height: 40px;
+    width: 40px;
+    border-radius: 100%;
+    background-color:rgba(123, 123, 123, 0.658) ;
+    box-shadow: 0px 0px 20px white inset;
+    border: none;
+    position: absolute;
+    left: 125px;
+    bottom: 5px;
+ }
+ #nobb{
+    width: 50px;
+    height: 50px;
+    border: none;
+    bottom: 20px;
+    border-radius: 100%;
+    /* background-color: white; */
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.148) inset;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+ }
+ .clearback1, .ok{
+  background-color: transparent;
+  width: 50px;
+ height: 50px;
+  border: none;
+  border-radius: 100%;
+  cursor: pointer;
+  color: white;
+  font-size: 20px;
+ }
+ #digits{  
+  position: absolute;
+  display: flex;
+  flex-wrap: wrap;
+  width: 200px;
+  justify-content: center;
+  height: 100px;
+  top: 180px;
+   flex-wrap: wrap;
+    gap: 20px;
+    top: 180px;
+    display: none;
+     left: 55px;
+     line-height: 20px;
+   
+} 
+#passwordpindisplay{
+  color: white;
+  width: 150px;
+  height: 40px;
+  left: 50px;
+  padding: 0px 20px ;
+  font-size: 24px;
+  text-align: center;
+  position: absolute;
+  top: 130px;
+  z-index: 1;
+  
+  
+}
+#homepage{
+   background-image:url(IMG_1103.JPG) ;
+   background-position: center;
+   background-size: cover;
+   background-repeat: no-repeat;
+    height: 502px;
+    width: 300px;
+    border: none;
+    border-radius: 20px;
+    position: absolute;
+    top: 0px;
+    display: none;
+    
+}
+#menu{
+  position: absolute;
+  display: flex;
+  gap: 30px;
+  bottom: 10px;
+   gap: 30px;
+  padding-left: 15px;
+  padding-right: 15px;
+  display: none;
+}
+#menunob1{
+   position: relative;
+   bottom: 0px;
+  width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 100%;
+    background-color: white;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.148) inset;
+    font-size: 17px;
+    font-weight: 500;
+}
+#callpage{
+ position: absolute;
+  background-color: rgb(168, 164, 159);
+  height: 502px;
+    width: 300px;
+    border-radius:20px;
+    top:9px ;
+    left: 0px;
+    display: none; 
+  
+}
+/* #menunob{
+width: 50px;
+height: 50px;
+border: none;
+border-radius: 100%;
+background-color: white;
+box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.148) inset;
+font-size: 5px;
+font-weight: 200;
+} */
+
+</style>    
+    <body>
+        <script src="https://kit.fontawesome.com/77700015b1.js" crossorigin="anonymous"></script>
+        <div class="phone">
+            <div class="speaker"></div>
+         <div class="camera"></div>
+         <button id="btn" onclick="toggleMode()"></button>
+         <button id="btn2" onclick="volumee( )"></button>
+         <button id="btn3" onclick="volume( )"></button>
+          <div id="vol"></div>
+
+          <div id="screen">
+            <div id="comb">
+                <div id="date">
+                   <p id="time"></p>
+                </div>
+                <div id="network">
+                    <i class="fa-solid fa-wifi fa-fade wif"></i>
+                    <i class="fa-solid fa-signal fa-beat sig"></i>
+                    <i class="fa-solid fa-battery-full bat"></i>
+                 </div>
+                 <p id="passwordpindisplay"></p>
+            </div>
+            <div id="darkscreen"></div>
+             
+            <button onclick="digitHolder()" id="passwordcarrier"></button>
+            <div id="digits">
+               <button id="nobb" onclick="pinner(1)">1</button>
+               <button id="nobb" onclick="pinner(2)">2</button>
+               <button id="nobb" onclick="pinner(3)">3 </button>
+               <button id="nobb" onclick="pinner(4)">4</button>
+               <button id="nobb" onclick="pinner(5)">5</button>
+               <button id="nobb" onclick="pinner(6)">6</button>
+               <button id="nobb" onclick="pinner(7)">7</button>
+               <button id="nobb" onclick="pinner(8)">8</button>
+               <button id="nobb" onclick="pinner(9)">9</button>
+               <button class="clearback1" onclick="del1('clear')"><i class="bi bi-backspace gg"></i></button>
+               <button id="nobb" onclick="pinner(0)">0</button>
+               <button class="ok" onclick="pinner( )">Ok</button>
+            </div>
+        
+            <main id="homepage"></main>
+                <div id="menu">
+                    <button id="menunob1" onclick="calling()"><i class="fa-solid fa-phone"></i></button>
+                    <div id="callpage">
+                       <div id="phoneseaerchicon">
+                        <div id="search-container">
+                            <form id="search-form">
+                                <img src="./images/search.png" alt="" height="20px">
+                                <input type="text" id="search-input" placeholder="Search Google or type a URL">
+                                 <img src="./images/voice.png" alt="" height="20px">
+                                 <img src="./images/image.png" alt="" height="20px">
+                            </form>
+                        </div>
+                       </div>
+                       <p id="dignumberdisplay"></p>
+                       <div id="number_holder">
+                          <button id="nobb" onclick="typedDigit(1)">1</button>
+                          <button id="nobb" onclick="typedDigit(2)">2</button>
+                          <button id="nobb" onclick="typedDigit(3)">3 </button>
+                          <button id="nobb" onclick="typedDigit(4)">4</button>
+                          <button id="nobb" onclick="typedDigit(5)">5</button>
+                          <button id="nobb" onclick="typedDigit(6)">6</button>
+                          <button id="nobb" onclick="typedDigit(7)">7</button>
+                          <button id="nobb" onclick="typedDigit(8)">8</button>
+                          <button id="nobb" onclick="typedDigit(9)">9</button>
+                          <button id="nobb" onclick="typedDigit('*')"><i class="fa-solid fa-asterisk"></i></button>
+                          <button id="nobb" onclick="typedDigit(0)">0</button>
+                          <button id="nobb" onclick="typedDigit('#')">#</button>
+                          <button class="videocam" onclick="del1('clear')"><i class="fa-solid fa-video"></i></button>
+                          <button class="fg" id="nobgreen" onclick="greendialling()"><i class="fa-solid fa-phone"></i></button>
+                          <button class="clearback2" onclick="del2('clear')"><i class="bi bi-backspace gg"></i></button>
+                       </div>
+           
+                       <div id="callpageoptions">
+                          <p id="dotted">Favorites</p>
+                          <p id="dotted">Recents</p>
+                          <p id="dotted">Contacs</p>
+                        </div>   
+                    </div>
+                   <!-- <div class="Apps-container" >
+                    <button id="menunob" onclick="menu()"><img src="images/Google_Messages.png"></button>
+                    <button id="menunob" onclick="menu()"><img src="images/google.png"></button>
+                    <button id="menunob" onclick="displayCam()"><img src="images/camera-icon.png"></i> </button>
+
+                </div> -->
+            
+
+            </main>
+        </div>
+
+
+
+
+        <script src="index.js"></script>
+    </body>
+    </html>
+   
