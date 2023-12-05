@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phone App</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+</head>
+<body>
+<main class="container">
+<div class="Phone">
+    <div class="speaker"></div>
+    <div class="camera"></div>
+    <button id="btn" onclick="toggleMode()"></button>
+    <button id="btn2" onclick="volume( )"></button>
+    <button id="btn3" onclick="volumee( )"></button>
+    <div id="vol"></div>
+    <div id="comb">
+        <div id="datetime">
+    
+            <p id="timeInfo">
+              <span id="time"></span>
+            </p>
+            <p id="dateInfo">
+                <span id="dayOfWeek"></span>
+                <span id="month"></span>
+                <span id="date"></span>
+              </p>
+          </div>
+         
+        <div id="network">
+          <i class="bi bi-wifi"></i>
+           <i class="bi bi-reception-4"></i>
+           <i class="bi bi-bar-chart-fill"></i>
+           <i class="bi bi-battery-full"></i>
+        </div>
+   </div>
+      <div id="darkscreen"></div>
+      <div id="lockscreen">
+        <div class="move">
+          <p>MTN-StaySafe - MTN - NG - Airtel </p>
+        </div>
+             <button onclick="digitHolder()" id="passwordcarrier"></button>
+        <div class="btn-success">
+          <i class="bi bi-telephone"></i>
+          </div>
+          <div class="btn-success2">
+            <i class="bi bi-camera"></i>
+        </div>
+      </div>
+    <div id="password">
+        <button onclick="digitHolder()" id="passwordcarrier"></button>
+        <p id="passwordpindisplay"></p>
+      <div id="digits">
+        <button id="nobb" onclick="pinner(1)">1</button>
+        <button id="nobb" onclick="pinner(2)">2</button>
+        <button id="nobb" onclick="pinner(3)">3 </button>
+        <button id="nobb" onclick="pinner(4)">4</button>
+        <button id="nobb" onclick="pinner(5)">5</button>
+        <button id="nobb" onclick="pinner(6)">6</button>
+        <button id="nobb" onclick="pinner(7)">7</button>
+        <button id="nobb" onclick="pinner(8)">8</button>
+        <button id="nobb" onclick="pinner(9)">9</button>
+        <button class="clearback1" onclick="del1('clear')"><i class="bi bi-backspace gg"></i></button>
+        <button id="nobb" onclick="pinner(0)">0</button>
+        <button class="ok" onclick="pinner( )">Ok</button>
+        <button id="emcall">Emergency call</button>
+      </div>
+     
+   </div>
+      <div id="homepage">
+        <div id="search-container">
+            <form id="search-form">
+               <img src="./images/google.png" alt="" height="20px">
+               <input type="text" id="search-input" placeholder="Search....">
+               <img src="./images/voice.png" alt="" height="20px">
+               <img src="./images/image.png" alt="" height="20px">
+            </form>
+        </div>
+        <div class="btncontainer">
+          <button id="menunob" onclick="calling()"><img src="images/call.png" height="40px"></button>
+          <button id="menunob" onclick="menu()"><img src="images/Google_Messages.png" height="40px"></button>
+          <button id="menunob" onclick="menu()"><img src="images/google.png" height="40px"></button>
+          <button id="menunob" onclick="displayCam()"><img src="images/camera-icon.png" height="40px"></button>
+          <button id="setAlarmButton" onclick="setAlarm()"><img src="images/alarm.png" height="40px"></button>
+          <button id="menunob" onclick="menu()"><img src="images/gmail.png" height="40px"></button>
+          <button id="menunob" onclick="menu()"><img src="images/contacts.png" height="40px"></button>
+          <button id="menunob" onclick="menu()"><img src="images/google-photo.png" height="40px"></button>
+          <button id="menunob" onclick="menu()"><img src="images/calendar.png" height="40px"></button>
+          <button id="menunob" onclick="menurecharge()"><img src="images/recharge.png" height="40px"></button>
+          <button id="menunob" onclick="menu()"><img src="images/map.png" height="40px"></button>
+          <button id="menunob" onclick="menu()"><img src="images/drive.png" height="40px"></button>
+          <button id="menunob" onclick="menu()"><img src="images/whatapp.png" height="40px"></button>
+       </div>
+
+
+ 
+
+
+
+
+       </div>
+       <video id="cam" autoplay src=""></video>
+<!-- 
+       <div id="callpage">
+          <div id="phoneseaerchicon">
+             <div id="search-container">
+                <form id="search-form">
+                   <img src="./images/search - Copy.png" alt="" height="20px">
+                   <input type="text" id="search-input" placeholder="Search contacts & places">
+                   <img src="./images/voice.png" alt="" height="20px">
+                   <img src="./images/image.png" alt="" height="20px">
+                </form>
+             </div>
+          </div> -->
+          <p id="dignumberdisplay"></p>
+          <div id="number_holder">
+             <button id="nobb" onclick="typedDigit(1)">1</button>
+             <button id="nobb" onclick="typedDigit(2)">2</button>
+             <button id="nobb" onclick="typedDigit(3)">3 </button>
+             <button id="nobb" onclick="typedDigit(4)">4</button>
+             <button id="nobb" onclick="typedDigit(5)">5</button>
+             <button id="nobb" onclick="typedDigit(6)">6</button>
+             <button id="nobb" onclick="typedDigit(7)">7</button>
+             <button id="nobb" onclick="typedDigit(8)">8</button>
+             <button id="nobb" onclick="typedDigit(9)">9</button>
+             <button id="nobb" onclick="typedDigit('*')"><i class="fa-solid fa-asterisk"></i></button>
+             <button id="nobb" onclick="typedDigit(0)">0</button>
+             <button id="nobb" onclick="typedDigit('#')">#</button>
+             <button class="videocam" onclick="del1('clear')"><i class="fa-solid fa-video"></i></button>
+             <button class="fg" id="nobgreen" onclick="greendialling()"><img src="images/call.png"
+                   height="10px"></button>
+             <button class="clearback2" onclick="del2('clear')"><i class="bi bi-backspace gg"></i></button>
+          </div>
+
+          <div id="callpageoptions">
+             <p id="dotted">Favorites</p>
+             <p id="dotted">Recents</p>
+             <p id="dotted">Contacs</p>
+          </div>
+
+          <div id="callingnum">
+             <p id="callingg">calling...</p>
+             <p id="numbercalling"></p>
+
+             <div id="callingicons">
+                <button id="callingss"><i class="fa-solid fa-plus"></i>
+                   <p id="callings2">Add call</p>
+                </button>
+                <button id="callingss"><i class="fa-solid fa-pause"></i>
+                   <p id="callings2">Pause</p>
+                </button>
+                <button id="callingss"><i class="fa-brands fa-bluetooth-b"></i>
+                   <p id="callings2">Bluetooth</p>
+                </button>
+                <button id="callingss"><i class="fa-solid fa-volume-high"></i>
+                   <p id="callings2">Speaker</p>
+                </button>
+                <button id="callingss"><i class="fa-solid fa-microphone-slash"></i>
+                   <p id="callings2">Mute</p>
+                </button>
+                <button id="callingsss"><i class="fa-solid fa-grip "></i>
+                   <p id="callings2">Keypad</p>
+                </button>
+                <button class="fgg" id="nobred" onclick="callcutting()"><i class="fa-solid fa-phone"></i></button>
+
+             </div>
+          </div>
+      </div>
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>

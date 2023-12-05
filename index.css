@@ -1,0 +1,392 @@
+*{
+    box-sizing: border-box;
+}
+.body{
+   margin: 0;
+   padding: 0;
+}
+.Phone{
+    position: relative;
+    border: 2px solid  #807575;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 85vh;
+    width: 30%;
+    margin: 50px;
+    padding: 40px;
+    box-shadow: 0px 0px 50px rgba(7, 7, 7, 0.758);
+    overflow: hidden;
+    margin-left: 35%;
+    border-radius: 30px;
+}
+.speaker {
+    position: absolute;
+    width: 50%;
+    height: 4px;
+    z-index: 2;
+    top: 0px;
+    background-color:#3b3939 ;
+    border-radius: 2px;
+    
+ }
+ .camera {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #6b6565;
+    border-radius: 120%;
+    top: 4px;
+    z-index: 2;
+  
+ }
+ #btn {
+    border: none;
+    position: absolute;
+    height: 45px;
+    width: 1px;
+    top: 155px;
+    left: 325px;
+    background-color: #5c5959;
+    border-radius: 50px;
+    box-shadow: 0px 0px 50px 50px rgba(85, 84, 84, 0.824) inset;
+    z-index: 4;
+ }
+
+  #btn2 {
+   border: none;
+    position: absolute;
+    height: 30px;
+    width: 1px;
+    top: 70px;
+    left: 325px;
+    background-color: #5c5959;
+    border-radius: 50px;
+    box-shadow: 0px 0px 50px 50px rgba(85, 84, 84, 0.824) inset;
+    z-index: 1;
+ }
+
+ #btn3 {
+    border: none;
+    position: absolute;
+    height: 35px;
+    width: 1px;
+    top: 100px;
+    left: 325px;
+    background-color: #5c5959;
+    border-radius: 50px;
+    box-shadow: 0px 0px 50px 50px rgba(85, 84, 84, 0.824) inset;
+    z-index: 1;
+ } 
+ #vol {
+    z-index: 1;
+    position: absolute;
+    top: 90px;
+    height: 5px;
+    border: none;
+    left: 315px;
+    width: 3px;
+    background-color: rgba(255, 255, 255, 0.913);
+    border-radius: 50px;
+    box-shadow: 0px 0px 50px 5px rgba(0, 0, 0, 0.596) inset;
+    display: none;
+
+ }
+ #darkscreen {
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.758) inset;
+    height: 600px;
+    width: 400px;
+    border-radius: 0px 0px 2px 2px;
+    background-color: black;
+    position: absolute;
+    margin-top: 0px;
+    border-radius: 20px;
+    z-index: 3;
+    left: 0;
+    bottom: 0;
+ }
+#datetime {
+   position: absolute;
+   top: 30px;
+   left: 5px;
+   z-index: 2;
+   color: white;
+   font-size: 20px;
+   font-family: 'Arial', sans-serif;
+   text-align: center;
+ }
+
+ #dateInfo {
+   display: inline-block;
+   margin: 0px;
+   font-size: 15px;
+   font-weight: smaller;
+   
+ }
+ #timeInfo{
+   margin: 0px;
+   font-size: 30px;
+   font-weight: bold;
+  left: 0px;
+ }
+ 
+
+ 
+#network {
+   position: absolute;
+   top: 10px;
+   left: 250px;
+   height: 20px;
+   width: 100px;
+   gap: 8px;
+   z-index: 1;
+   color: white;
+   font-size: 12px;
+}
+
+#lockscreen{
+   position: absolute;
+   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.758) inset;
+   height: 600px;
+   width: 400px;
+   border-radius: 0px 0px 2px 2px;
+   background-image: url(IMG_1104.JPG);
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+   margin-top: 1px;
+   border-radius: 22px;
+   display: none;
+}
+.btn-success{
+   position: absolute;
+   height: 20px;
+   width: 30px;
+   color: white;
+   bottom: 50px;
+   left: 50px;
+   background: transparent;
+}
+.btn-success2{
+   position: absolute;
+  background: transparent;
+   height: 20px;
+   width: 30px;
+   color: white;
+   bottom: 50px;
+   right: 50px;
+}
+.bi bi-telephone{
+   font-size: 20px;
+   /* left: 10px; */
+}
+.bi bi-camera{
+   font-size: 20px;
+    /* right: 10px; */
+} 
+#passwordcarrier {
+   height: 40px;
+   width: 40px;
+   border-radius: 100%;
+   background-color: rgba(123, 123, 123, 0.658);
+   box-shadow: 0px 0px 20px white inset;
+   border: none;
+   position: absolute;
+   left: 175px;
+   bottom: 40px;
+}
+#password{
+   position: absolute;
+   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.758) inset;
+   height: 600px;
+   width: 400px;
+   border-radius: 0px 0px 2px 2px;
+   background-image: url(img.jpg);
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+   margin-top: 1px;
+   border-radius: 22px;
+   display: none;
+}
+#digits {
+   position: absolute;
+   top:200px ;
+   width:200px ;
+   left: 100px;
+   height: 200px;
+   gap: 20px;
+   justify-content: center;
+   display: flex;
+   flex-wrap: wrap;
+   display: none;
+   line-height: 20px; 
+  
+}
+#nobb {
+   width: 50px;
+   height: 50px;
+   border: none;
+   color: white;
+   border-radius: 100%;
+   background-color: transparent;
+   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.148) inset;
+   font-size: 20px;
+   font-weight: 200;
+   cursor: pointer;
+   top: 40px;
+}
+.clearback1,
+      .ok {
+         background-color: transparent;
+         width: 50px;
+         height: 50px;
+         border: none;
+         border-radius: 100%;
+         cursor: pointer;
+         color: white;
+         font-size: 20px;
+      }
+      #passwordpindisplay {
+         color: white;
+         width: 200px;
+         height: 40px;
+         left: 100px;
+         padding: 0px 20px;
+         font-size: 24px;
+         text-align: center;
+         position: absolute;
+         top: 150px;
+         z-index: 1;
+         /* border: 2px solid red; */
+      }
+
+      #emcall{
+         height: 30px;
+         width: 130px;
+        font-size: 15px;
+        font-weight: small;
+         border: none;
+         border-radius: 40px;
+      }
+      .move{
+         position: absolute;
+         width: fit-content;
+         height: 30px;
+         color: white;
+         justify-content: center;
+         align-items: center;
+         overflow-y: none;
+         top: 40px;
+         left: 10px;
+         font-size: 12px;
+         z-index: 1;
+         white-space: nowrap;
+
+      }
+      .move p{
+          animation: marquee 5s linear  infinite;
+      }
+      @keyframes marquee {
+         from {
+            transform: translateX(20%);
+         }to{
+            transform: translateX(-100%);
+         }
+      }
+      #homepage{
+         position: absolute;
+         box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.758) inset;
+         height: 600px;
+         width: 400px;
+         border-radius: 0px 0px 2px 2px;
+         background-image: url(IMG_1104.JPG);
+         background-position: center;
+         background-repeat: no-repeat;
+         background-size: cover;
+         margin-top: 1px;
+         border-radius: 22px;
+         display: none;
+         background-image: url(IMG_1103.JPG);
+         background-repeat: no-repeat;
+         background-size: cover;
+      }
+      #search-container {
+         position: absolute;
+         display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 30px;
+            padding: 10px;
+            top: 100px;
+            width: 300px;
+            background-color: transparent;
+      }
+      #search-form{
+         position: absolute;
+         width: 250px;
+         height: 35px;
+         margin: 30px;
+         display: flex;
+         left: 40px;
+         align-items: center;
+         box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+       border-radius: 24px;
+       background-color: #ffffffc5;
+     }
+
+      #search-input{
+         flex: 1;
+         height: 30px;
+         width: 10px;
+         border: none;
+         padding: 5px 5px;
+         font-size: 16px;
+         outline: none;
+         cursor: pointer;
+         background-color: transparent;
+     }
+     img{
+       
+         margin: 10px;
+         padding: 0px;
+         font-size: 50px;
+         font-weight: bold;
+     }
+     .btncontainer {
+      position: absolute;
+      display: flex;
+      flex-wrap: wrap; 
+      gap: 20px;
+      justify-content: center;
+      align-items: center;
+      top: 200px;
+      margin: 5px;
+       padding: 10px;
+      border: 2px solid red;
+   }
+     #menunob,
+     #setAlarmButton,
+     #menurecharge {
+        /* position: absolute; */
+        background-color: transparent;
+        border: none;
+        font-size: 5px;
+        font-weight: 400;
+        justify-content: space-between;
+        border-radius: none;
+        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.148) inset;
+        align-items: center;
+       
+     }
+     #cam {
+      top: 8px;
+      border-radius: 10px;
+      position: absolute;
+      z-index: 10;
+      background-size: cover;
+      width: 300px;
+      display: block;
+
+   }
+      
